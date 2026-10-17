@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+:root {
+  --background: 42 38% 96%;
+  --foreground: 221 31% 19%;
+  --border: 219 24% 88%;
+  --input: 219 24% 86%;
+  --card: 42 36% 99%;
+  --card-foreground: 221 31% 19%;
+  --primary: 222 38% 29%;
+  --primary-foreground: 42 38% 97%;
+  --secondary: 226 34% 92%;
+  --secondary-foreground: 225 32% 30%;
+  --muted: 225 25% 93%;
+  --muted-foreground: 221 15% 47%;
+  --accent: 184 35% 87%;
+  --accent-foreground: 194 42% 24%;
+  --destructive: 5 62% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --popover: 42 38% 98%;
+  --popover-foreground: 221 31% 19%;
+  --ring: 190 35% 48%;
+  --chart-1: 222 38% 29%;
+  --chart-2: 184 35% 50%;
+  --chart-3: 34 57% 69%;
+  --chart-4: 272 25% 67%;
+  --chart-5: 8 49% 69%;
+  --app-font-sans: ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --app-font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --app-font-mono: ui-monospace, monospace;
+  --radius: 1rem;
+  --button-outline: rgba(27, 41, 67, 0.12);
+  --badge-outline: rgba(27, 41, 67, 0.08);
+  --elevate-1: rgba(27, 41, 67, .035);
+  --elevate-2: rgba(27, 41, 67, .07);
+}
+.dark {
+  --background: 221 31% 12%; --foreground: 42 30% 93%; --border: 220 19% 26%;
+  --input: 220 19% 31%; --card: 221 27% 16%; --card-foreground: 42 30% 93%;
+  --primary: 184 42% 68%; --primary-foreground: 221 31% 12%;
+  --secondary: 220 22% 23%; --secondary-foreground: 42 30% 91%;
+  --muted: 220 22% 22%; --muted-foreground: 220 14% 68%;
+  --accent: 220 25% 25%; --accent-foreground: 184 42% 78%;
+  --destructive: 5 55% 55%; --destructive-foreground: 0 0% 100%;
+  --popover: 221 27% 16%; --popover-foreground: 42 30% 93%; --ring: 184 42% 68%;
+}
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans antialiased bg-background text-foreground; margin: 0; }
+  button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid hsl(var(--ring)); outline-offset: 3px; }
+}
+.serif { font-family: var(--app-font-serif); }
+.page-enter { animation: rise .42s cubic-bezier(.2,.75,.3,1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,1 @@
+- [FirstStep demo scope](firststep-demo-scope.md) — Keep the initial analysis local and illustrative; protect message privacy and avoid claims of real AI.

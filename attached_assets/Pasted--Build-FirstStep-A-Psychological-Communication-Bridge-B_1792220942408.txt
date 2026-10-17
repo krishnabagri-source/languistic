@@ -1,0 +1,488 @@
+# Build FirstStep — A Psychological Communication Bridge
+
+Build a polished, responsive web application called **FirstStep** with the tagline:
+
+**"Bridge the gap between what you feel and what you want to say."**
+
+## 1. Core purpose
+
+FirstStep is a psychological communication-support tool designed to help people overcome internal barriers that make communication difficult.
+
+These barriers include:
+- Fear of being judged or misunderstood.
+- Fear of rejection or confrontation.
+- Overthinking the meaning of another person's message.
+- Difficulty expressing emotions clearly.
+- Hesitation to ask questions or seek help.
+- Difficulty saying no or setting boundaries.
+- Anxiety about approaching friends, seniors, teachers, teammates, or colleagues.
+
+The application should help a user move from confusion, hesitation, or emotional overwhelm toward clearer understanding and more confident communication.
+
+This is NOT a generic chatbot, a therapy application, or a mental-health diagnosis tool.
+
+**The main workflow is: Receive a message → Understand possible meanings → Reflect on the psychological barrier → Decide what to communicate → Prepare a response in the user's own voice.**
+
+The website must emphasize empathy, emotional safety, accessibility, and human control.
+
+## 2. Technology requirements
+
+Use:
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Lucide React icons
+
+Build a frontend-first prototype that runs without a backend, database, or paid API key.
+
+Implement a small amount of real functionality using local TypeScript logic, predefined examples, and deterministic mock analysis.
+
+Do not pretend that a real AI model is connected. Clearly label results as demonstration analysis.
+
+Structure the code so a real AI backend can be integrated later without rewriting the whole application.
+
+Keep components, types, example scenarios, and analysis logic in separate files.
+
+## 3. Design and visual identity
+
+Create a premium, modern, calming interface suitable for a student innovation hackathon.
+
+Visual direction:
+- Warm off-white background.
+- Deep navy text.
+- Muted lavender and soft blue accents.
+- Soft green accents for supportive actions.
+- Rounded cards with subtle borders and shadows.
+- Generous whitespace.
+- Readable modern typography.
+- Minimal, elegant Lucide icons.
+- Smooth, subtle transitions.
+- Mobile-first responsive design.
+
+The product should feel psychologically safe, mature, supportive, and trustworthy.
+
+Avoid:
+- Neon colors.
+- Overly childish illustrations.
+- A generic ChatGPT-style interface.
+- Excessive animations.
+- Medical or clinical dashboard styling.
+- Fake testimonials, statistics, or claims about improving mental health.
+
+Create an original logo using a simple bridge and speech-bubble concept.
+
+## 4. Landing page
+
+### Navigation bar
+
+Include:
+- FirstStep logo.
+- How It Works.
+- Our Principles.
+- Try FirstStep.
+
+The Try FirstStep button should scroll to or open the main application.
+
+### Hero section
+
+Headline:
+
+"Some messages are hard to understand. Some feelings are hard to express."
+
+Subheading:
+
+"FirstStep helps you navigate difficult conversations, understand possible meanings without jumping to conclusions, and find the words to express yourself with clarity and confidence."
+
+Primary button: "Let's take the first step"
+
+Secondary button: "Explore how it works"
+
+Add a visually attractive sample conversation card showing an incoming message and a preview of multiple possible interpretations.
+
+Include a short statement:
+
+"You are in control. No response is sent without your permission."
+
+### Psychological barriers section
+
+Create interactive or informative cards for these barriers:
+
+1. Fear of judgment.
+2. Fear of rejection.
+3. Overthinking messages.
+4. Difficulty expressing feelings.
+5. Fear of confrontation.
+6. Difficulty setting boundaries.
+
+Each card should explain the barrier in one or two sentences and show how FirstStep can help with communication.
+
+Do not label users as having a disorder or assume that everyone who experiences these barriers has a mental-health condition.
+
+### How it works
+
+Display four steps:
+
+1. Share the message and optional situation.
+2. Explore what the message says and what it might mean.
+3. Understand your communication goal and what is making the conversation difficult.
+4. Prepare a response that feels authentic to you.
+
+### Our principles
+
+Create four polished cards:
+
+**Understanding**
+Separate what was actually said from possible interpretations. Acknowledge uncertainty and never claim to know another person's thoughts.
+
+**Emotional Safety**
+Offer nonjudgmental guidance, let users pause or leave, and never pressure them to reply, apologize, forgive, or reconcile.
+
+**Accessibility**
+Use readable text, good contrast, keyboard navigation, visible focus indicators, accessible form labels, and responsive layouts.
+
+**Human Control**
+Users can edit, reject, regenerate, or copy suggestions. Nothing is automatically sent. The app supports decision-making rather than making decisions for the user.
+
+## 5. Main application: guided conversation workspace
+
+When the user selects "Let's take the first step", open a dedicated workspace.
+
+Use a clean, guided form with clear sections. Avoid making the user answer too many questions at once.
+
+### Section A: The message
+
+Heading:
+
+"What did the other person say?"
+
+Create a large text area with the placeholder:
+
+"Paste the message you received. Share only what you feel comfortable sharing."
+
+Include:
+- Character counter.
+- Clear button.
+- Optional example message buttons.
+- Friendly empty-state guidance.
+
+Provide these fictional examples:
+- "Fine, do whatever you want."
+- "We need to talk."
+- "You should have known this already."
+- "I feel like you don't listen to me."
+- "I don't think you're contributing enough."
+- "Why didn't you tell me earlier?"
+
+Selecting an example should populate the message field.
+
+### Section B: Understand the situation
+
+Heading:
+
+"Help us understand the context."
+
+Make every field optional except the original message.
+
+Add a situation selector with cards for:
+- Friendship.
+- Family.
+- Romantic relationship.
+- College or academics.
+- Senior or mentor interaction.
+- Teamwork or internship.
+- Conflict or misunderstanding.
+- Other.
+
+Add an optional field:
+
+"What happened before this message?"
+
+Placeholder:
+"Share a little background if you think it would help."
+
+Add another optional field:
+
+"What do you think the other person means?"
+
+Placeholder:
+"Tell us what you are worried they might mean, even if you are unsure."
+
+Add an optional field:
+
+"What do you want to convey to them?"
+
+Placeholder:
+"Explain what you want them to understand about your feelings, needs, or point of view."
+
+### Section C: Identify the communication barrier
+
+Heading:
+
+"What is making this conversation difficult for you?"
+
+Let users select one or more options:
+- I am afraid of being judged.
+- I am afraid they might reject me.
+- I am overthinking what the message means.
+- I don't know how to express my feelings.
+- I am afraid the conversation will become an argument.
+- I find it difficult to say no or set boundaries.
+- I am worried about damaging the relationship.
+- I don't know how to start my reply.
+- I am not sure what I am feeling.
+- Something else.
+- I don't know yet.
+
+Use selectable cards or accessible checkbox chips with small icons.
+
+Do not assume the user has a particular barrier simply because they pasted a message.
+
+### Section D: What do you want help with?
+
+Allow users to select their primary goal:
+- Understand the message.
+- Stop overthinking possible meanings.
+- Reply calmly and confidently.
+- Express my feelings clearly.
+- Explain my point of view.
+- Set a respectful boundary.
+- Ask for clarification.
+- Apologize or repair a misunderstanding.
+- Decline a request respectfully.
+- Prepare to start a difficult conversation.
+- Decide whether I want to reply at all.
+
+Allow the user to select their preferred response tone:
+- Warm and understanding.
+- Calm and neutral.
+- Clear and direct.
+- Gentle but firm.
+- Casual and natural.
+
+Add a primary button:
+
+"Help me find clarity"
+
+Enable it when the message field is not empty.
+
+## 6. Implement working demonstration analysis
+
+After submission, display a brief loading animation and generate a structured result using local TypeScript logic.
+
+The analysis must change based on the message example, situation, selected psychological barriers, user's goal, and preferred tone.
+
+Use a simple, honest mock-analysis engine. Create specific result templates for the supplied examples and a neutral fallback for unknown messages.
+
+Do not simply display the same generic result for every input.
+
+Clearly label the output:
+
+"Prototype analysis — illustrative suggestions, not verified AI interpretation."
+
+### Result 1: What was actually said?
+
+Summarize the literal message in neutral language.
+
+Clearly distinguish the sender's actual words from interpretations of those words.
+
+### Result 2: What could it mean?
+
+Offer two or three plausible interpretations when appropriate.
+
+For each interpretation, include:
+- Possible meaning.
+- What in the message supports that possibility.
+- What remains unknown.
+
+Use wording such as:
+- "One possibility is..."
+- "Depending on the context..."
+- "This message alone does not tell us..."
+- "You could ask for clarification if you are unsure."
+
+Never declare that the sender is angry, manipulative, toxic, jealous, or intentionally hurtful without sufficient evidence.
+
+Do not imply that the application can read minds or accurately infer hidden intentions.
+
+### Result 3: Understand your barrier
+
+Reflect the barrier selected by the user.
+
+For example, if they selected fear of judgment, display:
+
+"Fear of being judged can make it difficult to say what you really mean. You do not have to find perfect words before you begin."
+
+If they selected overthinking, display:
+
+"When a message feels unclear, your mind may generate several explanations. Try separating what you know from what you are guessing."
+
+If they selected fear of confrontation, display:
+
+"You can be clear about your feelings without making the conversation hostile. It is also okay to pause before responding."
+
+If the user did not select a barrier, do not assign one to them.
+
+Include one short reflection exercise relevant to the selected barrier.
+
+### Result 4: Separate facts from assumptions
+
+Create an interactive card with two columns:
+
+"What I know"
+- Information directly supported by the message or context.
+
+"What I am guessing"
+- Possible interpretations that have not been confirmed.
+
+For a generic message, avoid inventing facts. Let the user edit both columns.
+
+Include a reflection question:
+
+"What else could explain this message?"
+
+### Result 5: What do you want them to understand?
+
+Reflect the user's stated communication goal and the context they supplied.
+
+Show the user's original explanation in an editable field.
+
+If they did not specify what they want to convey, invite them to add it without making it mandatory.
+
+### Result 6: Prepare your response
+
+Generate three locally defined response examples based on the selected goal and tone.
+
+Include:
+1. Gentle and empathetic.
+2. Clear and direct.
+3. Firm but respectful, when appropriate.
+
+Examples should be natural and concise, not robotic.
+
+For a message such as "We need to talk", example responses might include:
+- Warm: "Of course. Is there something specific you'd like us to discuss?"
+- Neutral: "Sure. When would be a good time?"
+- Direct: "Okay. Can you give me a little context so I know what to expect?"
+
+These are examples, not universal answers.
+
+Every response must be editable in a text area.
+
+Include functional buttons:
+- Copy response.
+- Try another version.
+- Edit response.
+
+When the user changes the selected tone, update the suggested responses.
+
+The regenerate button must actually cycle through alternative local templates rather than repeating the same response.
+
+### Result 7: Before you send anything
+
+Create a supportive reflection card with three optional questions:
+
+- "Am I responding to what they actually said, or to what I fear they meant?"
+- "What do I want this person to understand?"
+- "Does this response sound like me?"
+
+Add a final choice:
+- I feel ready to respond.
+- I want to edit my response.
+- I would rather wait.
+- I need more clarity first.
+
+Do not make the user feel that replying immediately is necessary.
+
+## 7. Emotional safety requirements
+
+Emotional safety must be a core product behavior.
+
+- Use respectful, nonjudgmental language.
+- Validate the user's feelings without automatically agreeing with every interpretation.
+- Do not pressure users into forgiveness, reconciliation, confrontation, or disclosure.
+- Allow users to choose not to reply.
+- Do not diagnose psychological conditions.
+- Do not claim to treat anxiety, depression, trauma, or other conditions.
+- Do not encourage the user to send a response that could put them at risk.
+- If a scenario indicates threats, coercion, or immediate danger, prioritize the user's safety and trusted human support instead of recommending confrontation.
+- Avoid manipulative scripts, guilt-tripping, threats, or emotionally coercive language.
+
+The product should help people think more clearly without pretending to replace a trusted person or qualified professional.
+
+## 8. Accessibility and privacy
+
+Accessibility:
+- Use semantic HTML and properly associated labels.
+- Ensure keyboard navigation works.
+- Add visible focus states.
+- Maintain readable contrast and font sizes.
+- Support mobile, tablet, and desktop layouts.
+- Do not use color as the only signal.
+- Support reduced-motion preferences.
+- Make all dialogs and selectable options accessible.
+
+Privacy:
+- Do not store submitted messages in local storage or a database.
+- Keep analysis in memory during the current session.
+- Include a clear privacy note encouraging users not to paste identifying or highly sensitive information.
+- Make clear that the current prototype uses local demonstration logic and does not connect to a real AI service.
+- Do not claim guaranteed privacy or confidentiality.
+
+## 9. Technical structure and future backend integration
+
+Organize the source code into reusable components.
+
+Suggested structure:
+
+src/
+  components/
+    Navbar.tsx
+    HeroSection.tsx
+    BarrierCards.tsx
+    MessageInput.tsx
+    SituationSelector.tsx
+    BarrierSelector.tsx
+    GoalSelector.tsx
+    AnalysisResults.tsx
+    InterpretationCard.tsx
+    FactsAssumptions.tsx
+    ResponseEditor.tsx
+    ReflectionCard.tsx
+    Footer.tsx
+  services/
+    analysisService.ts
+  data/
+    exampleMessages.ts
+    responseTemplates.ts
+  types/
+    analysis.ts
+  App.tsx
+  main.tsx
+  index.css
+
+You may adjust the file structure if needed, but maintain separation between UI and business logic.
+
+Create a typed analysis service with a function that accepts the message, optional context, selected situation, selected barriers, communication goal, and tone.
+
+For now, the service should use local mock analysis.
+
+Keep the service interface ready for a future backend API so a real AI model can later replace the mock implementation without major UI changes.
+
+Do not expose future API keys in frontend code.
+
+Create a README with setup instructions, project structure, and instructions for integrating a backend and database later.
+
+## 10. Final requirements
+
+Before finishing:
+- Run the app and fix compilation errors.
+- Test the full workflow from the landing page to message analysis and back.
+- Test each example message.
+- Confirm that different goals and tones produce different suggestions.
+- Confirm that users can edit and copy responses.
+- Confirm that all fields work on mobile and desktop.
+- Confirm that the application never claims certainty about another person's hidden intentions.
+- Ensure the interface is polished enough for a hackathon demonstration.
+
+**Priority: Build a complete, interactive frontend with a small but meaningful working demonstration of psychological communication support. Do not add unnecessary features at the expense of reliability.**
